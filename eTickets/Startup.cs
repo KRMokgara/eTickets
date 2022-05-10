@@ -25,7 +25,7 @@ namespace eTickets
         public void ConfigureServices(IServiceCollection services)
         {
             //DbContext Configuration
-            services.AddDbContext<AppDbContext>();
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer());
             services.AddControllersWithViews();
         }
 
